@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cazar - Teeworlds Instagib Clan">
+    <title>cazar</title>
+    <style>
+        :root {
+            --font-main: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            
+            --glass-bg: rgba(18, 18, 18, 0.35); 
+            --text-primary: #ffffff;
+            --text-secondary: #e8e6e3;
+            --border-ui: 1px solid rgba(255, 255, 255, 0.1); 
+            --blur-intensity: blur(25px);
+        }
+
+        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        
+        body {
+            font-family: var(--font-main);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-secondary);
+            overflow-x: hidden;
+            
+            background: linear-gradient(180deg, rgba(24, 26, 27, 0.45) 0%, rgba(15, 17, 18, 0.75) 100%), 
+                        url('bg.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: var(--text-primary);
+            text-shadow: 0 5px 20px rgba(0,0,0,0.6);
+        }
+
+        .wrapper { 
+            width: 90%; 
+            max-width: 1000px; 
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr; 
+            gap: 25px;
+            margin-bottom: 25px;
+            align-items: start; 
+        }
+
+        .glass-ui {
+            background-color: var(--glass-bg);
+            border: var(--border-ui);
+            backdrop-filter: var(--blur-intensity); 
+            -webkit-backdrop-filter: var(--blur-intensity);
+            border-radius: 16px;
+            transform: translateZ(0);
+        }
+
+        .card {
+            padding: 25px 22px; 
+            text-align: left;
+        }
+
+        .card h2 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0 0 12px 0;
+            color: var(--text-primary);
+        }
+
+        .card ul { list-style: none; padding: 0; margin: 0; }
+        .card ul li {
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .card p { font-size: 14px; line-height: 1.7; margin: 0; }
+        
+        .card a { 
+            color: var(--text-secondary); 
+            text-decoration: none; 
+            font-weight: 700; 
+            transition: color 0.2s ease;
+        }
+        
+        .card a:hover { color: var(--text-primary); }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: auto; 
+            margin-bottom: 10vh; 
+        }
+
+        .btn {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 13px;
+            font-weight: 500; 
+            text-transform: uppercase;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover { 
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn:active {
+            background-color: rgba(0, 0, 0, 0.6);
+            transform: translateY(1px);
+        }
+
+        footer { 
+            padding: 40px 0; 
+            font-size: 11px; 
+            color: rgba(232, 230, 227, 0.42); 
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+
+        @media (max-width: 950px) {
+            .card-grid, .button-grid { grid-template-columns: 1fr; }
+            .button-grid { margin-top: 40px; }
+            header h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header role="banner">
+        <h1>cʌzʌR</h1>
+    </header>
+
+    <main class="wrapper">
+        <section class="card-grid">
+            <div class="card glass-ui">
+                <h2>Members</h2>
+                <ul>
+                    <li></li>
+                    <li>Efe Pasha</li>
+                    <li>dfiguereo94</li>
+                    <li>coroinha</li>
+                    <li>AET</li>
+                    <li>zQuendie</li>
+                </ul>
+            </div>
+            
+            <div class="card glass-ui">
+                <h2>Welcome !</h2>
+                <p>Cazar is a teeworlds clan that primarily plays instagib, For further information, visit <a href="https://wiki.cazar.xyz">cazar wiki</a></p>
+                <ul><li></li></ul>
+                <h2></h2>
+                <h2>Report Player</h2>
+                <p>To report a player on official Cazar servers, please record a demo, note the date and time of the incident, and send it to our moderators via <a href="https://discord.com/invite/CvX2naHm6k">discord</a> or email (cazartw@gmail.com).</p>
+            
+            </div>
+            
+            <div class="card glass-ui">
+                <h2>Servers</h2>
+                <ul>
+                    <li></li>
+                    <li>Fng 1 - 192.168.1.1:8307</li>
+                    <li>Fng 2 - 192.168.1.1:8307</li>
+                    <li>Solo Fng 1 - 192.168.1.1:8307</li>
+                    <li>Ictf 1 - 192.168.1.1:8307</li>
+                    <li>Gctf 1 - 192.168.1.1:8308</li>
+                </ul>
+            </div>
+        </section>
+
+        <nav class="button-grid" aria-label="Quick Links">
+            <a href="https://wiki.cazar.xyz" class="btn glass-ui">Wiki</a>
+            <a href="https://discord.com/invite/CvX2naHm6k" class="btn glass-ui" target="_blank" rel="noopener">Discord</a>
+            <a href="https://www.youtube.com/@CazarTW" class="btn glass-ui" target="_blank" rel="noopener">YouTube</a>
+        </nav>
+    </main>
+
+    <footer role="contentinfo">
+        2025 – 2026 Clan cʌzʌR
+    </footer>
+
+</body>
+</html>
